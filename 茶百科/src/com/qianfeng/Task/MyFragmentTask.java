@@ -22,32 +22,19 @@ import com.qianfeng.bean.DataNews;
 import com.qianfeng.tea_config.Config;
 
 /**
- * 解析网络数据
+ * 解析每个Fragment的网络数据
  * 
  * @author Administrator
  *
  */
-public class MyTask extends AsyncTask<String, Void, List<DataNews>> {
-
-	// String headlineUrl = Config.URL_HEAD + Config.PAGE + "0" + Config.ROWS
-	// + "20";
-	//
-	// String cyclopediaUrl = Config.URL_OTHER + Config.PAGE + "0" + Config.ROWS
-	// + "15" + Config.TYPE + "16";
-	// String messageUrl = Config.URL_OTHER + Config.PAGE + "0" + Config.ROWS
-	// + "15" + Config.TYPE + "52";
-	// String manageUrl = Config.URL_OTHER + Config.PAGE + "0" + Config.ROWS
-	// + "15" + Config.TYPE + "53";
-	// String dataUrl = Config.URL_OTHER + Config.PAGE + "0" + Config.ROWS +
-	// "15"
-	// + Config.TYPE + "54";
+public class MyFragmentTask extends AsyncTask<String, Void, List<DataNews>> {
 
 	private List<DataNews> datas;
 	private mAdapter adapter;
 	private PullToRefreshListView mPullRefreshView;
 	private ContentType mType;
 
-	public MyTask(PullToRefreshListView mPullRefreshView, List<DataNews> datas,
+	public MyFragmentTask(PullToRefreshListView mPullRefreshView, List<DataNews> datas,
 			mAdapter adapter, ContentType mType) {
 		this.adapter = adapter;
 		this.datas = datas;
@@ -55,16 +42,6 @@ public class MyTask extends AsyncTask<String, Void, List<DataNews>> {
 		this.mType = mType;
 	}
 
-	// 通过传过来的Type 判断Url
-	// private String getUrlByType(ContentType mType) {
-	// String url = null;
-	// if (mType == ContentType.TOUTIAO) {
-	// url = Config.URL_HEAD;
-	// } else {
-	// url = Config.URL_OTHER;
-	// }
-	// return url;
-	// }
 
 	// 通过传过来的Type 返回type的数值
 	private String getTypeValue(ContentType mType) {

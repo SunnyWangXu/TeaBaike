@@ -1,4 +1,4 @@
-package com.qianfeng.tea_cyclopedia;
+package com.qianfeng.tea_home_activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 
 import com.qianfeng.Enum.ContentType;
 import com.qianfeng.MyFragment.MyFragment;
+import com.qianfeng.tea_cyclopedia.R;
 
 public class HomeActivity extends FragmentActivity implements TabListener,
 		OnPageChangeListener {

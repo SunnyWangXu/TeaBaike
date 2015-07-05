@@ -1,4 +1,4 @@
-package com.qianfeng.tea_load;
+package com.qianfeng.tea_load_activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,10 +9,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
 
-import com.qianfeng.Welcome.WelcomeActivity;
+import com.qianfeng.tea_Welcome_activity.WelcomeActivity;
 import com.qianfeng.tea_config.Config;
-import com.qianfeng.tea_cyclopedia.HomeActivity;
 import com.qianfeng.tea_cyclopedia.R;
+import com.qianfeng.tea_home_activity.HomeActivity;
 
 public class LoadActivity extends Activity {
 	public static boolean isFirstIn = true;

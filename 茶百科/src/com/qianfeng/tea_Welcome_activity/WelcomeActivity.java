@@ -1,4 +1,4 @@
-package com.qianfeng.Welcome;
+package com.qianfeng.tea_Welcome_activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ import android.view.Window;
 import android.widget.ImageView;
 
 import com.qianfeng.Adapter.mPagerAdapter;
-import com.qianfeng.tea_cyclopedia.HomeActivity;
 import com.qianfeng.tea_cyclopedia.R;
+import com.qianfeng.tea_home_activity.HomeActivity;
 
 public class WelcomeActivity extends Activity {
 	private ViewPager mPager;

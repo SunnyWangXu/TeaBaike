@@ -24,7 +24,7 @@ import com.jack.pullrefresh.ui.PullToRefreshBase.OnRefreshListener;
 import com.jack.pullrefresh.ui.PullToRefreshListView;
 import com.qianfeng.Adapter.mAdapter;
 import com.qianfeng.Enum.ContentType;
-import com.qianfeng.Task.MyTask;
+import com.qianfeng.Task.MyFragmentTask;
 import com.qianfeng.bean.DataNews;
 import com.qianfeng.tea_cyclopedia.R;
 import com.qianfeng.webview_activity.WebViewActivity;
@@ -152,8 +152,8 @@ public class MyFragment extends Fragment implements OnPageChangeListener,
 		/**
 		 * 异步任务加载解析数据
 		 */
-		MyTask myTask = new MyTask(mPullRefreshView, datas, adapter, mType);
-		myTask.execute(new String());
+		MyFragmentTask myFragmentTask = new MyFragmentTask(mPullRefreshView, datas, adapter, mType);
+		myFragmentTask.execute(new String());
 
 		super.onViewCreated(view, savedInstanceState);
 		// 下拉刷新之后收回加载条
