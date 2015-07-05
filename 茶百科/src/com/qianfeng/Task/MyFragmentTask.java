@@ -16,7 +16,7 @@ import org.json.JSONObject;
 import android.os.AsyncTask;
 
 import com.jack.pullrefresh.ui.PullToRefreshListView;
-import com.qianfeng.Adapter.mAdapter;
+import com.qianfeng.Adapter.mListAdapter;
 import com.qianfeng.Enum.ContentType;
 import com.qianfeng.bean.DataNews;
 import com.qianfeng.tea_config.Config;
@@ -30,12 +30,12 @@ import com.qianfeng.tea_config.Config;
 public class MyFragmentTask extends AsyncTask<String, Void, List<DataNews>> {
 
 	private List<DataNews> datas;
-	private mAdapter adapter;
+	private mListAdapter adapter;
 	private PullToRefreshListView mPullRefreshView;
 	private ContentType mType;
 
 	public MyFragmentTask(PullToRefreshListView mPullRefreshView, List<DataNews> datas,
-			mAdapter adapter, ContentType mType) {
+			mListAdapter adapter, ContentType mType) {
 		this.adapter = adapter;
 		this.datas = datas;
 		this.mPullRefreshView = mPullRefreshView;

@@ -13,11 +13,11 @@ import android.widget.TextView;
 import com.qianfeng.bean.DataNews;
 import com.qianfeng.tea_cyclopedia.R;
 
-public class mAdapter extends BaseAdapter {
+public class mListAdapter extends BaseAdapter {
 
 	private List<DataNews> datas;
 
-	public mAdapter(List<DataNews> datas) {
+	public mListAdapter(List<DataNews> datas) {
 		this.datas = datas;
 	}
 

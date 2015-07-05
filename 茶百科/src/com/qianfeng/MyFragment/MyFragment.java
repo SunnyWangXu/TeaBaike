@@ -22,7 +22,7 @@ import android.widget.RadioGroup;
 import com.jack.pullrefresh.ui.PullToRefreshBase;
 import com.jack.pullrefresh.ui.PullToRefreshBase.OnRefreshListener;
 import com.jack.pullrefresh.ui.PullToRefreshListView;
-import com.qianfeng.Adapter.mAdapter;
+import com.qianfeng.Adapter.mListAdapter;
 import com.qianfeng.Enum.ContentType;
 import com.qianfeng.Task.MyFragmentTask;
 import com.qianfeng.bean.DataNews;
@@ -145,7 +145,7 @@ public class MyFragment extends Fragment implements OnPageChangeListener,
 			mListView.addHeaderView(pagerView);
 		}
 
-		mAdapter adapter = new mAdapter(datas);
+		mListAdapter adapter = new mListAdapter(datas);
 		mListView.setAdapter(adapter);
 
 		mListView.setOnItemClickListener(this);
@@ -180,7 +180,7 @@ public class MyFragment extends Fragment implements OnPageChangeListener,
 	// mListView点击事件
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		String itemID = datas.get(position).getId();
+		String itemID = datas.get(position -1).getId();
 		Intent intent = new Intent();
 		intent.putExtra("id", itemID);
 		intent.setClass(parent.getContext(), WebViewActivity.class);
